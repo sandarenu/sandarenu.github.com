@@ -1,9 +1,0 @@
----
-contentdir: "content"
-layoutdir: "layouts"
-publishdir: "public"
-indexes:
-  category: "categories"
-baseurl: "http://sandarenu.github.io"
-title: "My new blog powered by Hugo"
-...
