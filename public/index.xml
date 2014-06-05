@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Recent Content on My new blog powered by Hugo </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://sandarenu.github.io/index.xml</link>
+    
+    
+    
+    <updated>Thu, 05 Jun 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Welcome to my new Blog</title>
+      <link>http://sandarenu.github.io/posts/welcome2newblob</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://sandarenu.github.io/posts/welcome2newblob</guid>
+      <description>
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Welcome&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m testing my new blog powered by hugo and github pages. Stay tuned&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
