@@ -3,7 +3,7 @@
   <channel>
       <title>Hugo on Sandarenu&#39;s Blog </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/categories/hugo/index.xml</link>
+    <link>http://sandarenu.github.io/categories/hugo/index.xml</link>
     
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Welcome to my new Blog</title>
-      <link>http://localhost:1313/posts/welcome2newblog</link>
+      <link>http://sandarenu.github.io/posts/welcome2newblog</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/posts/welcome2newblog</guid>
+      <guid>http://sandarenu.github.io/posts/welcome2newblog</guid>
       <description>
 
 &lt;h2 id=&#34;toc_0&#34;&gt;Welcome &amp;hellip;&lt;/h2&gt;
