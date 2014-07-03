@@ -2,13 +2,14 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <base href="http://sandarenu.github.io">
-    <title> Categories </title>
-    <link rel="canonical" href="http://sandarenu.github.io/categories">
+    <title> Java </title>
+    <link rel="canonical" href="http://sandarenu.github.io/categories/java">
     
 
 <link rel="stylesheet" href="/css/poole.css">
@@ -61,30 +62,39 @@
     <div class="masthead">
         <div class="container">
             <h1 class="masthead-title">
-                <a href="/posts" title="Blog">Sandarenu's Blog</a>
+                <a href="/" title="Blog">Sandarenu's Blog</a>
             </h1>
         </div>
     </div>
 
     
     <div class="container content">
+        <h1 class="post-title">Posts in &ldquo;Java&rdquo;</h1>
         <section id="main">
             <div>
-                <h2>Archive of Posts, by category</h2>
-                <ul class="category">
-                    
-                    
-                    <li><a href="/categories/programming"> programming </a> (1 entries) </li>
-                    
-                    <li><a href="/categories/java"> java </a> (1 entries) </li>
-                    
-                    <li><a href="/categories/hugo"> hugo </a> (1 entries) </li>
-                    
-                    <li><a href="/categories/personal"> personal </a> (1 entries) </li>
-                    
-                </ul>
+                
+                
+
+<article class="post">
+    <header>
+        <h2><a href='http://sandarenu.github.io/posts/caution_with_java_autoboxing'> Caution with Java Autoboxing</a></h2>
+
+        <div class="post-meta">Thu, Jun 5, 2014 - 200 Words</div>
+    </header>
+
+    In Java Boxing means when you convert a primitive type to a reference type. So when you have some thing like boolean myBool = new Boolean("true"); Boolean object is converted to primitive type boolean. So how this happens under the hood? Java compiler uses the method booleanValue() in Boolean class to get the primitive value. This is where you have to be careful; there is a possibility of NPE when the Boolean object is null.
+    <footer>
+        <a href='http://sandarenu.github.io/posts/caution_with_java_autoboxing'>
+            <nobr>Read more →</nobr>
+        </a>
+    </footer>
+</article>
+
+                
             </div>
         </section>
+
+        <h5><a href="/categories">Full Category Index</a></h5>
     </div>
 </div>
 
@@ -118,6 +128,7 @@
 
 </body>
 </html>
+
 
 
 

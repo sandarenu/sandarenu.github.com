@@ -10,6 +10,43 @@
     <updated>Thu, 05 Jun 2014 00:00:00 UTC</updated>
     
     <item>
+      <title>Caution with Java Autoboxing</title>
+      <link>http://sandarenu.github.io/posts/caution_with_java_autoboxing</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://sandarenu.github.io/posts/caution_with_java_autoboxing</guid>
+      <description>&lt;p&gt;In Java &lt;strong&gt;Boxing&lt;/strong&gt; means when you convert a primitive type to a reference type. So when you have some thing like&lt;/p&gt;
+
+&lt;pre&gt;
+boolean myBool = new Boolean(&#34;true&#34;);
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;Boolean&lt;/code&gt; object is converted to primitive type &lt;code&gt;boolean&lt;/code&gt;. So how this happens under the hood? Java compiler uses the
+method &lt;code&gt;booleanValue()&lt;/code&gt; in &lt;code&gt;Boolean&lt;/code&gt; class to get the primitive value. This is where you have to be careful; there is a possibility
+of NPE when the &lt;code&gt;Boolean&lt;/code&gt; object is null.&lt;/p&gt;
+
+&lt;p&gt;Recently I had a NPE due to this. I was creating a POJO from mongo &lt;code&gt;DBObject&lt;/code&gt;. POJO had a boolean value and I was setting
+its value using a setter.&lt;/p&gt;
+
+&lt;pre&gt;
+public void setExpirableApp(boolean expirableApp) {
+        this.expirableApp = expirableApp;
+}
+&lt;/pre&gt;
+
+&lt;p&gt;I was calling the setter as follows.&lt;/p&gt;
+
+&lt;pre&gt;
+app.setExpirableApp((Boolean) dbObject.get(&#34;expirable-app&#34;))
+&lt;/pre&gt;
+
+&lt;p&gt;This is where I encounter NPE. At first glance everything looked fine. Problem happened when there is no field for &lt;code&gt;&amp;quot;expirable-app&amp;quot;&lt;/code&gt;
+in the DB. In that case &lt;code&gt;(Boolean) dbObject.get(&amp;quot;expirable-app&amp;quot;)&lt;/code&gt; would return &lt;code&gt;null&lt;/code&gt;. In the setter this is tried to convert to
+&lt;code&gt;boolean&lt;/code&gt; which throws NPE due to above explained auto-boxing. So need to be careful when handling scenarios like this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Welcome to my new Blog</title>
       <link>http://sandarenu.github.io/posts/welcome2newblog</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 UTC</pubDate>
