@@ -7,8 +7,8 @@
 <head>
     <meta charset="utf-8">
     <base href="http://sandarenu.github.io">
-    <title> Caution with Java Autoboxing </title>
-    <link rel="canonical" href="http://sandarenu.github.io/posts/caution_with_java_autoboxing">
+    <title> Easy way to Mock REST services </title>
+    <link rel="canonical" href="http://sandarenu.github.io/posts/easy_way_to_mock_rest_services">
     
 
 <link rel="stylesheet" href="/css/poole.css">
@@ -62,7 +62,7 @@
         <div class="container">
             <h1 class="masthead-title">
                
-                Caution with Java Autoboxing
+                Easy way to Mock REST services
             </h1>
         </div>
     </div>
@@ -71,35 +71,12 @@
     <div class="container content">
         
         <section id="main">
-            <h5 id="date"> Thu Jun 5, 2014 </h5>
-            <p>In Java <strong>Boxing</strong> means when you convert a primitive type to a reference type. So when you have some thing like</p>
+            <h5 id="date"> Sat Aug 2, 2014 </h5>
+            <p>These days we are working more and more with REST web services. Most of the times we are writing clients to access 3rd party sevices hosted in a remote server or even local services. Sometimes in large teams one group is developing the server and other group is writing the clients to use them. In such situations client team might need to test their clients without the availablity of the real service. They only have the API definition.</p>
 
-<pre>
-boolean myBool = new Boolean("true");
-</pre>
+<p>In last few months I came accross such situations multiple times. So I wanted to find out a fast and easy way to simulate(mock) a REST service. That is when I found out about the <a href="http://wiremock.org/">WireMocks</a> capability to create simple REST simulators very easily. I <a href="http://sandarenu.blogspot.com/2012/12/stubbing-asynchronous-http-services.html">knew about WireMock before</a> and had used it in intergration testing. But on those times I had used them with JUnit.</p>
 
-<p><code>Boolean</code> object is converted to primitive type <code>boolean</code>. So how this happens under the hood? Java compiler uses the
-method <code>booleanValue()</code> in <code>Boolean</code> class to get the primitive value. This is where you have to be careful; there is a possibility
-of NPE when the <code>Boolean</code> object is null.</p>
-
-<p>Recently I had a NPE due to this. I was creating a POJO from mongo <code>DBObject</code>. POJO had a boolean value and I was setting
-its value using a setter.</p>
-
-<pre>
-public void setExpirableApp(boolean expirableApp) {
-        this.expirableApp = expirableApp;
-}
-</pre>
-
-<p>I was calling the setter as follows.</p>
-
-<pre>
-app.setExpirableApp((Boolean) dbObject.get("expirable-app"))
-</pre>
-
-<p>This is where I encounter NPE. At first glance everything looked fine. Problem happened when there is no field for <code>&quot;expirable-app&quot;</code>
-in the DB. In that case <code>(Boolean) dbObject.get(&quot;expirable-app&quot;)</code> would return <code>null</code>. In the setter this is tried to convert to
-<code>boolean</code> which throws NPE due to above explained auto-boxing. So need to be careful when handling scenarios like this.</p>
+<p>Same Wiremock can be used to create simulators very easily. We can define request/response formats in a JSON file and use Wiremock to serve them. I have created a sample simulator  in <a href="https://github.com/sandarenu/rest-sim">Github</a>. Have a look and see how easy it is to create a simulator&hellip;</p>
 
         </section>
 
@@ -121,14 +98,10 @@ in the DB. In that case <code>(Boolean) dbObject.get(&quot;expirable-app&quot;)<
     <hr/>
     <hr/>
     
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="http://sandarenu.github.io/posts/easy_way_to_mock_rest_services">Easy way to Mock REST services</a>
-    </span>
-    
 
     
     <span class="right">
-    <em>Next: </em><a class="next" href="http://sandarenu.github.io/posts/welcome2newblog"> &nbsp; Welcome to my new Blog</a> &raquo;
+    <em>Next: </em><a class="next" href="http://sandarenu.github.io/posts/caution_with_java_autoboxing"> &nbsp; Caution with Java Autoboxing</a> &raquo;
     </span>
     
 </div>
@@ -138,18 +111,18 @@ in the DB. In that case <code>(Boolean) dbObject.get(&quot;expirable-app&quot;)<
         <div class="container">
     <nav class="nav-left">
     <ul>
-        <li><a href="https://twitter.com/intent/tweet?status=Caution%20with%20Java%20Autoboxing-http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing" target="_blank"
+        <li><a href="https://twitter.com/intent/tweet?status=Easy%20way%20to%20Mock%20REST%20services-http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services" target="_blank"
                title="Follow me on Twitter" class="st-icon-twitter">Twitter</a></li>
-        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing" target="_blank" title="Join me on Facebook"
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services" target="_blank" title="Join me on Facebook"
                class="st-icon-facebook">Facebook</a></li>
-        <li><a href="https://plus.google.com/share?url=http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing" target="_blank" title="Google+" class="st-icon-googleplus">Google+</a></li>
-        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing&title=Caution%20with%20Java%20Autoboxing&source=spf13"
+        <li><a href="https://plus.google.com/share?url=http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services" target="_blank" title="Google+" class="st-icon-googleplus">Google+</a></li>
+        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services&title=Easy%20way%20to%20Mock%20REST%20services&source=spf13"
                target="_blank" title="LinkedIn" class="st-icon-linkedin">LinkedIn</a></li>
-        <li><a href="http://del.icio.us/post?url=http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing" target="_blank" title="Delicious" class="st-icon-delicious">Delicious</a></li>
-        <li><a href="http://www.reddit.com/submit?url=http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing" target="_blank" title="Reddit" class="st-icon-reddit">Reddit</a></li>
-        <li><a href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing" target="_blank" title="StumbleUpon"
+        <li><a href="http://del.icio.us/post?url=http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services" target="_blank" title="Delicious" class="st-icon-delicious">Delicious</a></li>
+        <li><a href="http://www.reddit.com/submit?url=http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services" target="_blank" title="Reddit" class="st-icon-reddit">Reddit</a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services" target="_blank" title="StumbleUpon"
                class="st-icon-stumbleupon">StumbleUpon</a></li>
-        <li><a href="http://www.dzone.com/links/add.html?url=http%3a%2f%2fsandarenu.github.io%2fposts%2fcaution_with_java_autoboxing&title=Caution%20with%20Java%20Autoboxing" target="_blank" title="DZone"
+        <li><a href="http://www.dzone.com/links/add.html?url=http%3a%2f%2fsandarenu.github.io%2fposts%2feasy_way_to_mock_rest_services&title=Easy%20way%20to%20Mock%20REST%20services" target="_blank" title="DZone"
                class="st-icon-more">DZone</a></li>
     </ul>
     </nav>
@@ -160,9 +133,9 @@ in the DB. In that case <code>(Boolean) dbObject.get(&quot;expirable-app&quot;)<
     <script type="text/javascript">
          
         var disqus_shortname = 'sandarenu';
-        var disqus_identifier = 'http:\/\/sandarenu.github.io\/posts\/caution_with_java_autoboxing';
-        var disqus_title = 'Caution with Java Autoboxing';
-        var disqus_url = 'http:\/\/sandarenu.github.io\/posts\/caution_with_java_autoboxing';
+        var disqus_identifier = 'http:\/\/sandarenu.github.io\/posts\/easy_way_to_mock_rest_services';
+        var disqus_title = 'Easy way to Mock REST services';
+        var disqus_url = 'http:\/\/sandarenu.github.io\/posts\/easy_way_to_mock_rest_services';
 
 
          
