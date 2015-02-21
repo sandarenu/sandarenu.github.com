@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://sandarenu.github.io/</loc>
-    <lastmod>2014-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2014-11-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sandarenu.github.io/posts/super_charge_your_shell_will_zsh</loc>
+    <lastmod>2014-11-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,12 +18,12 @@
   </url>
   
   <url>
-    <loc>http://sandarenu.github.io/posts/caution_with_java_autoboxing</loc>
+    <loc>http://sandarenu.github.io/posts/welcome2newblog</loc>
     <lastmod>2014-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sandarenu.github.io/posts/welcome2newblog</loc>
+    <loc>http://sandarenu.github.io/posts/caution_with_java_autoboxing</loc>
     <lastmod>2014-06-05T00:00:00+00:00</lastmod>
   </url>
   
