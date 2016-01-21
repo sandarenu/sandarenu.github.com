@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on Sandarenu&#39;s Blog </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://sandarenu.github.io/index.xml</link>
-    
-    
-    
-    <updated>Sat, 08 Nov 2014 00:00:00 UTC</updated>
+    <title>Sandarenu&#39;s Blog</title>
+    <link>http://sandarenu.github.io/</link>
+    <description>Recent content on Sandarenu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2016</copyright>
+    <lastBuildDate>Sat, 08 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://sandarenu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Super Charge Your Shell with ZSH</title>
-      <link>http://sandarenu.github.io/posts/super_charge_your_shell_will_zsh</link>
-      <pubDate>Sat, 08 Nov 2014 00:00:00 UTC</pubDate>
+      <link>http://sandarenu.github.io/post/super_charge_your_shell_will_zsh/</link>
+      <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/posts/super_charge_your_shell_will_zsh</guid>
+      <guid>http://sandarenu.github.io/post/super_charge_your_shell_will_zsh/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve being using Linux as my primary OS for about 6 years.
 Since I&amp;rsquo;m doing programming all the time, I use shell all the time to perform various task from compiling to commiting code. First I used the normal Terminal comes with Ubuntu
 and then for about three years I&amp;rsquo;ve being using Terminator. Terminator is better than normal terminal since it has split screen feature. But no matter what the frontend, underneath
@@ -45,17 +46,56 @@ It is still the BASH.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I really like the GIT integration; I can see the current branch I&amp;rsquo;m working on and wether it is dirty or not directly from the terminal.
- &lt;img src=&#34;http://sandarenu.github.io/images/zsh-git.png&#34; alt=&#34;Terminal inside a GIT repo&#34; /&gt;
-&lt;/p&gt;
+ &lt;img src=&#34;http://sandarenu.github.io/images/zsh-git.png&#34; alt=&#34;Terminal inside a GIT repo&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Super Charge Your Shell with ZSH</title>
+      <link>http://sandarenu.github.io/posts/super_charge_your_shell_will_zsh/</link>
+      <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sandarenu.github.io/posts/super_charge_your_shell_will_zsh/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve being using Linux as my primary OS for about 6 years.
+Since I&amp;rsquo;m doing programming all the time, I use shell all the time to perform various task from compiling to commiting code. First I used the normal Terminal comes with Ubuntu
+and then for about three years I&amp;rsquo;ve being using Terminator. Terminator is better than normal terminal since it has split screen feature. But no matter what the frontend, underneath
+It is still the BASH.&lt;/p&gt;
+
+&lt;p&gt;Resently I came accross a new Shell, ZSH !. Well it is not a new thing, but I haven&amp;rsquo;t came accorss it before. I&amp;rsquo;ve to say that ZSH is far better than BASH. It has some really cool features. There is a very nice project called &lt;a href=&#34;https://github.com/robbyrussell/oh-my-zsh&#34;&gt;oh my zsh&lt;/a&gt; which is a community driven framework to manage zsh configurations. You can use &lt;code&gt;oh-my-zsh&lt;/code&gt; to install ZSH as well.&lt;/p&gt;
+
+&lt;p&gt;To installing ZSH just execute following command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl -L http://install.ohmyz.sh | sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It will download and setup zsh as well as scripts related to oh-my-zsh. Above itself tryies to change your default shell to zsh as well, but in my machine that part failed. In case if that happens use following to set it mannually.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chsh -s /bin/zsh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So what makes ZSH better than BASH?, well there are many reason. I&amp;rsquo;ve listed some of them below.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Powerful context based tab completion&lt;/li&gt;
+&lt;li&gt;Pattern matching/globbing on alien steroids&lt;/li&gt;
+&lt;li&gt;Themeable prompts&lt;/li&gt;
+&lt;li&gt;Loadable modules&lt;/li&gt;
+&lt;li&gt;Good spelling correction&lt;/li&gt;
+&lt;li&gt;Sharing of command history among all running shells (sometimes this can be annoying as well)&lt;/li&gt;
+&lt;li&gt;Global aliases&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I really like the GIT integration; I can see the current branch I&amp;rsquo;m working on and wether it is dirty or not directly from the terminal.
+ &lt;img src=&#34;http://sandarenu.github.io/images/zsh-git.png&#34; alt=&#34;Terminal inside a GIT repo&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Easy way to Mock REST services</title>
-      <link>http://sandarenu.github.io/posts/easy_way_to_mock_rest_services</link>
-      <pubDate>Sat, 02 Aug 2014 00:00:00 UTC</pubDate>
+      <link>http://sandarenu.github.io/post/easy_way_to_mock_rest_services/</link>
+      <pubDate>Sat, 02 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/posts/easy_way_to_mock_rest_services</guid>
+      <guid>http://sandarenu.github.io/post/easy_way_to_mock_rest_services/</guid>
       <description>&lt;p&gt;These days we are working more and more with REST web services. Most of the times we are writing clients to access 3rd party sevices hosted in a remote server or even local services. Sometimes in large teams one group is developing the server and other group is writing the clients to use them. In such situations client team might need to test their clients without the availablity of the real service. They only have the API definition.&lt;/p&gt;
 
 &lt;p&gt;In last few months I came accross such situations multiple times. So I wanted to find out a fast and easy way to simulate(mock) a REST service. That is when I found out about the &lt;a href=&#34;http://wiremock.org/&#34;&gt;WireMocks&lt;/a&gt; capability to create simple REST simulators very easily. I &lt;a href=&#34;http://sandarenu.blogspot.com/2012/12/stubbing-asynchronous-http-services.html&#34;&gt;knew about WireMock before&lt;/a&gt; and had used it in intergration testing. But on those times I had used them with JUnit.&lt;/p&gt;
@@ -65,35 +105,25 @@ It is still the BASH.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Welcome to my new Blog</title>
-      <link>http://sandarenu.github.io/posts/welcome2newblog</link>
-      <pubDate>Thu, 05 Jun 2014 00:00:00 UTC</pubDate>
+      <title>Easy way to Mock REST services</title>
+      <link>http://sandarenu.github.io/posts/easy_way_to_mock_rest_services/</link>
+      <pubDate>Sat, 02 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/posts/welcome2newblog</guid>
-      <description>
+      <guid>http://sandarenu.github.io/posts/easy_way_to_mock_rest_services/</guid>
+      <description>&lt;p&gt;These days we are working more and more with REST web services. Most of the times we are writing clients to access 3rd party sevices hosted in a remote server or even local services. Sometimes in large teams one group is developing the server and other group is writing the clients to use them. In such situations client team might need to test their clients without the availablity of the real service. They only have the API definition.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Welcome &amp;hellip;&lt;/h2&gt;
+&lt;p&gt;In last few months I came accross such situations multiple times. So I wanted to find out a fast and easy way to simulate(mock) a REST service. That is when I found out about the &lt;a href=&#34;http://wiremock.org/&#34;&gt;WireMocks&lt;/a&gt; capability to create simple REST simulators very easily. I &lt;a href=&#34;http://sandarenu.blogspot.com/2012/12/stubbing-asynchronous-http-services.html&#34;&gt;knew about WireMock before&lt;/a&gt; and had used it in intergration testing. But on those times I had used them with JUnit.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;m testing my new blog powered by hugo and github pages. I&amp;rsquo;ve bein using &lt;a href=&#34;http://sandarenu.blogspot.com&#34;&gt;blogger&lt;/a&gt; for sometime.
-Blogger is really nice platform, but sometimes formatting a post takes lot of effort. Especially when I need to
-add some code samples it is not that easy.&lt;/p&gt;
-
-&lt;p&gt;I love markdown, and I use it all the time in my day-today work. So wanted to try out static site generation using markdown.
-Initially I tried &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, but it was very bulky. Recently I found out about &lt;a href=&#34;http://hugo.spf13.com&#34;&gt;hugo&lt;/a&gt;
-and it looks very nice and compact. It is really easy to get started with hugo.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m planning to run this blog parallel to my blogger powered blog as a trial. If successful I&amp;rsquo;ll completely migrate to this blog.&lt;/p&gt;
-
-&lt;p&gt;Still there are quite few things to be done here like site design and importing my posts from blogger. So stay tuned..&lt;/p&gt;
+&lt;p&gt;Same Wiremock can be used to create simulators very easily. We can define request/response formats in a JSON file and use Wiremock to serve them. I have created a sample simulator  in &lt;a href=&#34;https://github.com/sandarenu/rest-sim&#34;&gt;Github&lt;/a&gt;. Have a look and see how easy it is to create a simulator&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Caution with Java Autoboxing</title>
-      <link>http://sandarenu.github.io/posts/caution_with_java_autoboxing</link>
-      <pubDate>Thu, 05 Jun 2014 00:00:00 UTC</pubDate>
+      <link>http://sandarenu.github.io/post/caution_with_java_autoboxing/</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/posts/caution_with_java_autoboxing</guid>
+      <guid>http://sandarenu.github.io/post/caution_with_java_autoboxing/</guid>
       <description>&lt;p&gt;In Java &lt;strong&gt;Boxing&lt;/strong&gt; means when you convert a primitive type to a reference type. So when you have some thing like&lt;/p&gt;
 
 &lt;pre&gt;
@@ -122,6 +152,91 @@ app.setExpirableApp((Boolean) dbObject.get(&#34;expirable-app&#34;))
 &lt;p&gt;This is where I encounter NPE. At first glance everything looked fine. Problem happened when there is no field for &lt;code&gt;&amp;quot;expirable-app&amp;quot;&lt;/code&gt;
 in the DB. In that case &lt;code&gt;(Boolean) dbObject.get(&amp;quot;expirable-app&amp;quot;)&lt;/code&gt; would return &lt;code&gt;null&lt;/code&gt;. In the setter this is tried to convert to
 &lt;code&gt;boolean&lt;/code&gt; which throws NPE due to above explained auto-boxing. So need to be careful when handling scenarios like this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Caution with Java Autoboxing</title>
+      <link>http://sandarenu.github.io/posts/caution_with_java_autoboxing/</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sandarenu.github.io/posts/caution_with_java_autoboxing/</guid>
+      <description>&lt;p&gt;In Java &lt;strong&gt;Boxing&lt;/strong&gt; means when you convert a primitive type to a reference type. So when you have some thing like&lt;/p&gt;
+
+&lt;pre&gt;
+boolean myBool = new Boolean(&#34;true&#34;);
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;Boolean&lt;/code&gt; object is converted to primitive type &lt;code&gt;boolean&lt;/code&gt;. So how this happens under the hood? Java compiler uses the
+method &lt;code&gt;booleanValue()&lt;/code&gt; in &lt;code&gt;Boolean&lt;/code&gt; class to get the primitive value. This is where you have to be careful; there is a possibility
+of NPE when the &lt;code&gt;Boolean&lt;/code&gt; object is null.&lt;/p&gt;
+
+&lt;p&gt;Recently I had a NPE due to this. I was creating a POJO from mongo &lt;code&gt;DBObject&lt;/code&gt;. POJO had a boolean value and I was setting
+its value using a setter.&lt;/p&gt;
+
+&lt;pre&gt;
+public void setExpirableApp(boolean expirableApp) {
+        this.expirableApp = expirableApp;
+}
+&lt;/pre&gt;
+
+&lt;p&gt;I was calling the setter as follows.&lt;/p&gt;
+
+&lt;pre&gt;
+app.setExpirableApp((Boolean) dbObject.get(&#34;expirable-app&#34;))
+&lt;/pre&gt;
+
+&lt;p&gt;This is where I encounter NPE. At first glance everything looked fine. Problem happened when there is no field for &lt;code&gt;&amp;quot;expirable-app&amp;quot;&lt;/code&gt;
+in the DB. In that case &lt;code&gt;(Boolean) dbObject.get(&amp;quot;expirable-app&amp;quot;)&lt;/code&gt; would return &lt;code&gt;null&lt;/code&gt;. In the setter this is tried to convert to
+&lt;code&gt;boolean&lt;/code&gt; which throws NPE due to above explained auto-boxing. So need to be careful when handling scenarios like this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome to my new Blog</title>
+      <link>http://sandarenu.github.io/post/welcome2newblog/</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sandarenu.github.io/post/welcome2newblog/</guid>
+      <description>
+
+&lt;h2 id=&#34;welcome:60a84f8c146bd6c0fe090d7b08cf9c48&#34;&gt;Welcome &amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m testing my new blog powered by hugo and github pages. I&amp;rsquo;ve bein using &lt;a href=&#34;http://sandarenu.blogspot.com&#34;&gt;blogger&lt;/a&gt; for sometime.
+Blogger is really nice platform, but sometimes formatting a post takes lot of effort. Especially when I need to
+add some code samples it is not that easy.&lt;/p&gt;
+
+&lt;p&gt;I love markdown, and I use it all the time in my day-today work. So wanted to try out static site generation using markdown.
+Initially I tried &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, but it was very bulky. Recently I found out about &lt;a href=&#34;http://hugo.spf13.com&#34;&gt;hugo&lt;/a&gt;
+and it looks very nice and compact. It is really easy to get started with hugo.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m planning to run this blog parallel to my blogger powered blog as a trial. If successful I&amp;rsquo;ll completely migrate to this blog.&lt;/p&gt;
+
+&lt;p&gt;Still there are quite few things to be done here like site design and importing my posts from blogger. So stay tuned..&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome to my new Blog</title>
+      <link>http://sandarenu.github.io/posts/welcome2newblog/</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sandarenu.github.io/posts/welcome2newblog/</guid>
+      <description>
+
+&lt;h2 id=&#34;welcome:60a84f8c146bd6c0fe090d7b08cf9c48&#34;&gt;Welcome &amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m testing my new blog powered by hugo and github pages. I&amp;rsquo;ve bein using &lt;a href=&#34;http://sandarenu.blogspot.com&#34;&gt;blogger&lt;/a&gt; for sometime.
+Blogger is really nice platform, but sometimes formatting a post takes lot of effort. Especially when I need to
+add some code samples it is not that easy.&lt;/p&gt;
+
+&lt;p&gt;I love markdown, and I use it all the time in my day-today work. So wanted to try out static site generation using markdown.
+Initially I tried &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, but it was very bulky. Recently I found out about &lt;a href=&#34;http://hugo.spf13.com&#34;&gt;hugo&lt;/a&gt;
+and it looks very nice and compact. It is really easy to get started with hugo.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m planning to run this blog parallel to my blogger powered blog as a trial. If successful I&amp;rsquo;ll completely migrate to this blog.&lt;/p&gt;
+
+&lt;p&gt;Still there are quite few things to be done here like site design and importing my posts from blogger. So stay tuned..&lt;/p&gt;
 </description>
     </item>
     
