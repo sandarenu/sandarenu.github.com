@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sandarenu&#39;s Blog</title>
-    <link>http://sandarenu.github.io/</link>
-    <description>Recent content on Sandarenu&#39;s Blog</description>
+    <title>Programming on Sandarenu&#39;s Blog</title>
+    <link>http://sandarenu.github.io/tags/programming/</link>
+    <description>Recent content in Programming on Sandarenu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
     <lastBuildDate>Fri, 22 Jan 2016 16:11:49 +0530</lastBuildDate>
-    <atom:link href="http://sandarenu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://sandarenu.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Understanding Guava Lists.transform()</title>
@@ -243,30 +243,6 @@ app.setExpirableApp((Boolean) dbObject.get(&#34;expirable-app&#34;))
 &lt;p&gt;This is where I encounter NPE. At first glance everything looked fine. Problem happened when there is no field for &lt;code&gt;&amp;quot;expirable-app&amp;quot;&lt;/code&gt;
 in the DB. In that case &lt;code&gt;(Boolean) dbObject.get(&amp;quot;expirable-app&amp;quot;)&lt;/code&gt; would return &lt;code&gt;null&lt;/code&gt;. In the setter this is tried to convert to
 &lt;code&gt;boolean&lt;/code&gt; which throws NPE due to above explained auto-boxing. So need to be careful when handling scenarios like this.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome to my new Blog</title>
-      <link>http://sandarenu.github.io/post/welcome2newblog/</link>
-      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sandarenu.github.io/post/welcome2newblog/</guid>
-      <description>
-
-&lt;h2 id=&#34;welcome:60a84f8c146bd6c0fe090d7b08cf9c48&#34;&gt;Welcome &amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;m testing my new blog powered by hugo and github pages. I&amp;rsquo;ve bein using &lt;a href=&#34;http://sandarenu.blogspot.com&#34;&gt;blogger&lt;/a&gt; for sometime.
-Blogger is really nice platform, but sometimes formatting a post takes lot of effort. Especially when I need to
-add some code samples it is not that easy.&lt;/p&gt;
-
-&lt;p&gt;I love markdown, and I use it all the time in my day-today work. So wanted to try out static site generation using markdown.
-Initially I tried &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, but it was very bulky. Recently I found out about &lt;a href=&#34;http://hugo.spf13.com&#34;&gt;hugo&lt;/a&gt;
-and it looks very nice and compact. It is really easy to get started with hugo.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m planning to run this blog parallel to my blogger powered blog as a trial. If successful I&amp;rsquo;ll completely migrate to this blog.&lt;/p&gt;
-
-&lt;p&gt;Still there are quite few things to be done here like site design and importing my posts from blogger. So stay tuned..&lt;/p&gt;
 </description>
     </item>
     

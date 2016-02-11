@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" Understanding Guava Lists.transform() &middot;  Sandarenu&#39;s Blog" />
+  	<meta property="og:site_name" content="Sandarenu&#39;s Blog" />
+  	<meta property="og:url" content="http://sandarenu.github.io/post/understanding-guava-lists-transform/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2016-01-22T16:11:49&#43;05:30" />
+
+    
+    <meta property="og:article:tag" content="Java" />
+    
+    <meta property="og:article:tag" content="Programming" />
+    
+    <meta property="og:article:tag" content="Guava" />
+    
+    
+
+  <title>
+     Understanding Guava Lists.transform() &middot;  Sandarenu&#39;s Blog
+  </title>
+
+    <meta name="description" content="All about Me and My Experiences..." />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://sandarenu.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://sandarenu.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://sandarenu.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://sandarenu.github.io/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://sandarenu.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sandarenu&#39;s Blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.15" />
+
+    <link rel="canonical" href="http://sandarenu.github.io/post/understanding-guava-lists-transform/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1148311-4', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://sandarenu.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://sandarenu.github.io/"><img src="http://sandarenu.github.io/images/sandarenu.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://sandarenu.github.io/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Understanding Guava Lists.transform()</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2016-01-22T16:11:49&#43;05:30">
+            Jan 22, 2016
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://sandarenu.github.io/tags/java/">#Java</a></span>
+         
+          <span class="post-tag small"><a href="http://sandarenu.github.io/tags/programming/">#Programming</a></span>
+         
+          <span class="post-tag small"><a href="http://sandarenu.github.io/tags/guava/">#Guava</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Guava is a wonderful library by Google. Before Java 8 Guava was one of the best ways to use functional programming in Java.</p>
+
+<p>I&rsquo;ve being using Guava in one of my projects and came accross an strance issue reasontly. I had a list of items and I wanted to convert them to different object and filter some of those items.</p>
+
+<p>After filtering I was changing some values in the list items. But what was strange was thay when I printed the list back it was not showing the changed value. It was still showing the original value. Code would look something similar to below.</p>
+
+<pre><code class="language-java">import com.google.common.base.Function;
+import com.google.common.collect.Lists;
+
+import java.util.List;
+
+public class LineItemHolderGuava {
+    private List&lt;ProcessedItem&gt; mainItems;
+    private List&lt;ProcessedItem&gt; optionalItems;
+
+    public LineItemHolderGuava(List&lt;LineItem&gt; main, List&lt;LineItem&gt; optional){
+        Function&lt;LineItem, ProcessedItem&gt; toSummaryItem = new Function&lt;LineItem, ProcessedItem&gt;() {
+            @Override
+            public ProcessedItem apply(LineItem lineItem) {
+                System.out.println(&quot;Function called with : &quot; + lineItem);
+                return new ProcessedItem(lineItem);
+            }
+        };
+
+        this.optionalItems = Lists.transform(optional, toSummaryItem);
+        this.mainItems = Lists.transform(main, toSummaryItem);
+    }
+
+    public List&lt;ProcessedItem&gt; getMainItems() {
+        return mainItems;
+    }
+
+    public List&lt;ProcessedItem&gt; getOptionalItems() {
+        return optionalItems;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(&quot;LineItemHolder{&quot;);
+        sb.append(&quot;mainItems=&quot;).append(mainItems);
+        sb.append(&quot;, optionalItems=&quot;).append(optionalItems);
+        sb.append('}');
+        return sb.toString();
+    }
+}
+</code></pre>
+
+<p>I have created a simple main method to test this.</p>
+
+<pre><code class="language-java">public static void main(String [] args){
+        Money m1 = new Money(&quot;LKR&quot;, &quot;10&quot;);
+        Money m2 = new Money(&quot;LKR&quot;, &quot;20&quot;);
+        Money m3 = new Money(&quot;LKR&quot;, &quot;30&quot;);
+        Money m4 = new Money(&quot;LKR&quot;, &quot;40&quot;);
+
+        LineItem l1 = new LineItem(m1, LineItem.OperationType.CREDIT, &quot;L1&quot;);
+        LineItem l2 = new LineItem(m2, LineItem.OperationType.DEBIT, &quot;L2&quot;);
+        LineItem l3 = new LineItem(m2, LineItem.OperationType.CREDIT, &quot;L3&quot;);
+        LineItem l4 = new LineItem(m2, LineItem.OperationType.DEBIT, &quot;L5&quot;);
+
+        List&lt;LineItem&gt; list1 = new ArrayList&lt;LineItem&gt;();
+        list1.add(l1);
+        list1.add(l2);
+
+        List&lt;LineItem&gt; list2 = new ArrayList&lt;LineItem&gt;();
+        list2.add(l3);
+        list2.add(l4);
+
+        LineItemHolderGuava guavaHolder = new LineItemHolderGuava(list1, list2);
+        System.out.println(&quot;G 1: &quot; + guavaHolder);
+
+        guavaHolder.getMainItems().get(0).setAmount(new Money(&quot;USD&quot;, &quot;50&quot;));
+        System.out.println(&quot;G 2: &quot; + guavaHolder);
+
+        guavaHolder.getMainItems().get(0).getAmount().setCurrencyCode(&quot;KES&quot;);
+        System.out.println(&quot;G 3: &quot; + guavaHolder);
+    }
+</code></pre>
+
+<p>What do you expect as the output?. I expected to see the second log printed with <code>USD</code>and third log printed with <code>KES</code>, but I was wrong. I got following output.</p>
+
+<pre><code>G 1: LineItemHolder{mainItems=[ProcessedItem{amount=Money{currencyCode='LKR', amount=10}, description='L1'}, ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L2'}], optionalItems=[ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L3'}, ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L5'}]}
+
+G 2: LineItemHolder{mainItems=[ProcessedItem{amount=Money{currencyCode='LKR', amount=10}, description='L1'}, ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L2'}], optionalItems=[ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L3'}, ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L5'}]}
+
+G 3: LineItemHolder{mainItems=[ProcessedItem{amount=Money{currencyCode='KES', amount=10}, description='L1'}, ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L2'}], optionalItems=[ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L3'}, ProcessedItem{amount=Money{currencyCode='LKR', amount=20}, description='L5'}]}
+
+</code></pre>
+
+<p>Strangly second log got printed with <code>LKR</code> and third log got printed with <code>KES</code>. This was driving me nuts. I put logs everywere, and debugged the code and I couldn&rsquo;t find any reason for this. Setter was called properly and I was unable to find a proper reason for this. I ended up rewriting this using Java8 stream API finally.</p>
+
+<pre><code class="language-java">import java.util.List;
+import java.util.stream.Collectors;
+
+public class LineItemHolderJ8 {
+    private List&lt;ProcessedItem&gt; mainItems;
+    private List&lt;ProcessedItem&gt; optionalItems;
+
+    public LineItemHolderJ8(List&lt;LineItem&gt; main, List&lt;LineItem&gt; optional) {
+        this.optionalItems = main.stream().map(l -&gt; new ProcessedItem(l)).collect(Collectors.toList());
+        this.mainItems = main.stream().map(l -&gt; new ProcessedItem(l)).collect(Collectors.toList());
+    }
+
+    public List&lt;ProcessedItem&gt; getMainItems() {
+        return mainItems;
+    }
+
+    public List&lt;ProcessedItem&gt; getOptionalItems() {
+        return optionalItems;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(&quot;LineItemHolder{&quot;);
+        sb.append(&quot;mainItems=&quot;).append(mainItems);
+        sb.append(&quot;, optionalItems=&quot;).append(optionalItems);
+        sb.append('}');
+        return sb.toString();
+    }
+}
+</code></pre>
+
+<p>During the day I was thinking about this and suddenly I got a feeling that this might be some special thing related to Guava. To my surprise it turn out to be how Guava <code>Lists.transform</code> works. When I called <code>this.mainItems = Lists.transform(main, toSummaryItem);</code>, I expected that it will transform the list in to new types and store the converted list in <code>this.mainItems</code>. But I was wrong. Guava <code>Lists.transform</code> do not transform the object completely at the first time. What is does is when someone access the list, on the fly it transforms and return the objects.
+So each time I call <code>toString</code> on the list, Guava will be taking the original list and convert them to the new object types using the function I&rsquo;ve given and return that to me. That why setting <code>guavaHolder.getMainItems().get(0).setAmount(new Money(&quot;USD&quot;, &quot;50&quot;));</code> didnt work. Even though we set new <code>Money</code> object, when we call the <code>toString</code> method to print the list, guava will be creating a completely new list using the original list.
+In the second time we directly changed the currency code <code>guavaHolder.getMainItems().get(0).getAmount().setCurrencyCode(&quot;KES&quot;);</code>. Here we are actually changing the Money object refered by both the original list and converted list.
+This functionaly was explained properly in the <a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/collect/Lists.html#transform%28java.util.List,%20com.google.common.base.Function%29">Guava docs</a>.</p>
+
+<blockquote>
+<p>Returns a list that applies function to each element of fromList. The returned list is a transformed view of fromList; changes to fromList will be reflected in the returned list and vice versa.</p>
+
+<p>Since functions are not reversible, the transform is one-way and new items cannot be stored in the returned list. The add, addAll and set methods are unsupported in the returned list.</p>
+
+<p>The function is applied lazily, invoked when needed. This is necessary for the returned list to be a view, but it means that the function will be applied many times for bulk operations like List.contains(java.lang.Object) and List.hashCode(). For this to perform well, function should be fast. To avoid lazy evaluation when the returned list doesn&rsquo;t need to be a view, copy the returned list into a new list of your choosing.</p>
+</blockquote>
+
+<p>It was my fault that I didn&rsquo;t read the docs properly. I ended up wasting around half a day to fixing a strange bug in one of my code due to this. So next time when you use <code>Lists.tranform</code> better remember this.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://sandarenu.github.io/" style="background-image: url(http://sandarenu.github.io/images/sandarenu.png)"><span class="hidden">Chathurika Sandarenu's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://sandarenu.github.io/">Chathurika Sandarenu</a></h4>
+  
+  <p>I currently works at hSenid Mobile Solutions as Associate Software Architects. My day job mainly includes writing different applications which powers Telco VAS</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Colombo, Sri Lanka</span>
+    <span class="author-link icon-link"><a href="http://sandarenu.github.io">http://sandarenu.github.io</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Understanding%20Guava%20Lists.transform%28%29&amp;url=http%3a%2f%2fsandarenu.github.io%2fpost%2funderstanding-guava-lists-transform%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fsandarenu.github.io%2fpost%2funderstanding-guava-lists-transform%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fsandarenu.github.io%2fpost%2funderstanding-guava-lists-transform%2f&amp;description=Understanding%20Guava%20Lists.transform%28%29"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fsandarenu.github.io%2fpost%2funderstanding-guava-lists-transform%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'Sandarenu';
+  var disqus_url = 'http:\/\/sandarenu.github.io\/post\/understanding-guava-lists-transform\/';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Sandarenu&#39;s Blog</a> All rights reserved - 2016</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://sandarenu.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="http://sandarenu.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://sandarenu.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
