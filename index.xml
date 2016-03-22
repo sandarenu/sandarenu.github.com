@@ -11,11 +11,11 @@
     <atom:link href="http://sandarenu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Getting started with react native</title>
-      <link>http://sandarenu.github.io/post/post-title/</link>
+      <title>Getting Started with React Native</title>
+      <link>http://sandarenu.github.io/post/getting-started-with-react-native/</link>
       <pubDate>Tue, 22 Mar 2016 21:53:17 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/post/post-title/</guid>
+      <guid>http://sandarenu.github.io/post/getting-started-with-react-native/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://facebook.github.io/react-native/&#34;&gt;React Native&lt;/a&gt; is a framework that allows us to create Native Android and iOS applications using JavaScripts by Facebook. It is a extention of &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React JavaScript framework&lt;/a&gt; available for Web application development. With React-Native we can create native android or iOS applications without knowing much about native application development. It opens up the native application development to web developers who knows JavaScript and CSS.&lt;/p&gt;
 
 &lt;p&gt;Main advantage of React-Native becomes very clear when we won&amp;rsquo;t to develop an application which requires a normal Web interface and native Android and iOS applications. By using React and React-Native we can reuse most of the code between three variations of our application. Previously we would have to maintain three separate code bases, but by using React we can use single code base and create all three types of applications; web, android and iOS.&lt;/p&gt;
