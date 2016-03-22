@@ -7,8 +7,96 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
-    <lastBuildDate>Fri, 22 Jan 2016 16:11:49 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2016 21:53:17 +0530</lastBuildDate>
     <atom:link href="http://sandarenu.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Getting started with react native</title>
+      <link>http://sandarenu.github.io/post/post-title/</link>
+      <pubDate>Tue, 22 Mar 2016 21:53:17 +0530</pubDate>
+      
+      <guid>http://sandarenu.github.io/post/post-title/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://facebook.github.io/react-native/&#34;&gt;React Native&lt;/a&gt; is a framework that allows us to create Native Android and iOS applications using JavaScripts by Facebook. It is a extention of &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React JavaScript framework&lt;/a&gt; available for Web application development. With React-Native we can create native android or iOS applications without knowing much about native application development. It opens up the native application development to web developers who knows JavaScript and CSS.&lt;/p&gt;
+
+&lt;p&gt;Main advantage of React-Native becomes very clear when we won&amp;rsquo;t to develop an application which requires a normal Web interface and native Android and iOS applications. By using React and React-Native we can reuse most of the code between three variations of our application. Previously we would have to maintain three separate code bases, but by using React we can use single code base and create all three types of applications; web, android and iOS.&lt;/p&gt;
+
+&lt;p&gt;When I was first started using React-Native, I had zero experiance with Android application development. But I was able to start developing andorid application without having much knowledge on android native applictions. React Native site has &lt;a href=&#34;https://facebook.github.io/react-native/docs/android-setup.html&#34;&gt;good guide&lt;/a&gt; on how to get start android application development. But when I started setting up my Ubuntu machine, I faced few deficulties. So I&amp;rsquo;m doing this post on how to overcome those issues and to the setup smoothly.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Follow the instructions given in the react guide to setup android SDK if you have not installed it yet. After installing SDK you&amp;rsquo;ll have to include that to your &lt;code&gt;$PATH&lt;/code&gt;. Update you &lt;code&gt;~/.profile&lt;/code&gt; with following.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;export ANDROID_HOME=/home/sandarenu/software/android-sdk-linux
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href=&#34;https://www.genymotion.com/&#34;&gt;Genemotion Andoid Emulator&lt;/a&gt;. It has a free for personal usage package. It has some limitaions than the paid verions, but features available in free version is enough for us. After installing Genemotion, . Create soft link to  &lt;code&gt;genymotion&lt;/code&gt; executable to &lt;code&gt;/usr/bin&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ln -s /home/sandarenu/software/genymotion/genymotion /usr/bin/genymotion
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;To use genemotions we need Oracle Virtual Box as well. If you don&amp;rsquo;t have it installed &lt;a href=&#34;https://www.virtualbox.org/wiki/Linux_Downloads&#34;&gt;install it&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you are using 64-bit Ubuntu, like I&amp;rsquo;m (does anybody uses 32-bit anymore?&amp;hellip;), then you have to install an additional dependency to use android SDK. Otherwise it throws following error when builing the application.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;java.io.IOException: Cannot run program &amp;quot;/home/sandarenu/software/android-sdk-linux/build-tools/23.0.1/aapt&amp;quot;: error=2, No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To fix that I have to install following library.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install lib32stdc++6 lib32z1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Refer &lt;a href=&#34;http://stackoverflow.com/questions/18928164/android-studio-cannot-find-aapt/18930424#18930424&#34;&gt;stackoverflow discussion&lt;/a&gt; for more information on this.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Then install NodeJS if you have not installed it yet. React Native &lt;a href=&#34;https://facebook.github.io/react-native/docs/getting-started-linux.html&#34;&gt;site has the instructions on this&lt;/a&gt;. I already had an old version of Node installed in my matchin. I had to update it to the latest version. To do that I used following.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also had to update my simlink.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ln -sf /usr/local/n/versions/node/&amp;lt;VERSION&amp;gt;/bin/node /usr/bin/node 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;We also have to install &lt;code&gt;watchman&lt;/code&gt; tool by facebook as well. Instuction on how to do that is also in the above guide.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Then install React Native&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt; sudo npm install -g react-native-cli
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now your setup is ready. We can create our first react native android application.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; react-native init HelloReactNative
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Go inside &lt;code&gt;HelloReactNative&lt;/code&gt; folder. Running react native andoid application is a two step process. First we have to build the native application and then we have to start the react native development sever. Actually there is another step, you have to start your emulator first.&lt;/p&gt;
+
+&lt;p&gt;To build android appication use following commands, after you fire up your emulator.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; npm install
+ react-native run-android
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Build will take few minutes. First time build will take more time since npm and gradle have to download its dependencies. While native build is running we can start react native dev server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;react-native start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If everything goes well you should be able to see your first android application powered by react-native in your emulator.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Understanding Guava Lists.transform()</title>
