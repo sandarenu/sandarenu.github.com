@@ -3,14 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sandarenu.github.io/posts/getting-started-with-react-native/</loc>
-    <lastmod>2016-03-22T21:53:17+05:30</lastmod>
+    <loc>https://sandarenu.github.io/tags/authorization/</loc>
+    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/tags/jenkins/</loc>
+    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/posts/jenkins-role-based-access/</loc>
+    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sandarenu.github.io/posts/</loc>
+    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/</loc>
+    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/tags/</loc>
+    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/posts/getting-started-with-react-native/</loc>
     <lastmod>2016-03-22T21:53:17+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -32,20 +67,6 @@
   
   <url>
     <loc>https://sandarenu.github.io/tags/react-native/</loc>
-    <lastmod>2016-03-22T21:53:17+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://sandarenu.github.io/</loc>
-    <lastmod>2016-03-22T21:53:17+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://sandarenu.github.io/tags/</loc>
     <lastmod>2016-03-22T21:53:17+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -141,6 +162,12 @@
   
   <url>
     <loc>https://sandarenu.github.io/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/tags/ci/cd/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

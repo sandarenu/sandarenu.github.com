@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Sandarenu&#39;s Blog</title>
+    <title>Jenkins Role Based Access | Sandarenu&#39;s Blog</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="All about Me and My Experiences...">
+    <meta name="description" content="Jenkins out of the box do not have Role based access support. But when using Jenkins in an organization we need to separate the access to different jenkins pipelines based on the user groups. For example developers should not have the access to production related pipelines.
+Fortunately there is a Jenkins plugin called &ldquo;Role-based Authorization Strategy&rdquo; to facilitate exactly this. It has bit of a complex workflow, but it provides the feature we need :).">
     <meta name="generator" content="Hugo 0.68.3" />
     
     
@@ -31,20 +32,26 @@
 
     
     
-      <link href="https://sandarenu.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sandarenu&#39;s Blog" />
-      <link href="https://sandarenu.github.io/index.xml" rel="feed" type="application/rss+xml" title="Sandarenu&#39;s Blog" />
-      
-    
-    
-    <meta property="og:title" content="Sandarenu&#39;s Blog" />
-<meta property="og:description" content="All about Me and My Experiences..." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://sandarenu.github.io/" />
-<meta property="og:updated_time" content="2022-03-19T16:09:40+05:30" />
-<meta itemprop="name" content="Sandarenu&#39;s Blog">
-<meta itemprop="description" content="All about Me and My Experiences..."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sandarenu&#39;s Blog"/>
-<meta name="twitter:description" content="All about Me and My Experiences..."/>
+    <meta property="og:title" content="Jenkins Role Based Access" />
+<meta property="og:description" content="Jenkins out of the box do not have Role based access support. But when using Jenkins in an organization we need to separate the access to different jenkins pipelines based on the user groups. For example developers should not have the access to production related pipelines.
+Fortunately there is a Jenkins plugin called &ldquo;Role-based Authorization Strategy&rdquo; to facilitate exactly this. It has bit of a complex workflow, but it provides the feature we need :)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sandarenu.github.io/posts/jenkins-role-based-access/" />
+<meta property="article:published_time" content="2022-03-19T16:09:40+05:30" />
+<meta property="article:modified_time" content="2022-03-19T16:09:40+05:30" />
+<meta itemprop="name" content="Jenkins Role Based Access">
+<meta itemprop="description" content="Jenkins out of the box do not have Role based access support. But when using Jenkins in an organization we need to separate the access to different jenkins pipelines based on the user groups. For example developers should not have the access to production related pipelines.
+Fortunately there is a Jenkins plugin called &ldquo;Role-based Authorization Strategy&rdquo; to facilitate exactly this. It has bit of a complex workflow, but it provides the feature we need :).">
+<meta itemprop="datePublished" content="2022-03-19T16:09:40&#43;05:30" />
+<meta itemprop="dateModified" content="2022-03-19T16:09:40&#43;05:30" />
+<meta itemprop="wordCount" content="480">
+
+
+
+<meta itemprop="keywords" content="CI/CD,Jenkins,Authorization," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Jenkins Role Based Access"/>
+<meta name="twitter:description" content="Jenkins out of the box do not have Role based access support. But when using Jenkins in an organization we need to separate the access to different jenkins pipelines based on the user groups. For example developers should not have the access to production related pipelines.
+Fortunately there is a Jenkins plugin called &ldquo;Role-based Authorization Strategy&rdquo; to facilitate exactly this. It has bit of a complex workflow, but it provides the feature we need :)."/>
 
 	
   </head>
@@ -52,9 +59,11 @@
   <body class="ma0 avenir bg-near-white">
 
     
+   
+  
 
   <header>
-    <div class="pb3-m pb6-l bg-black">
+    <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://sandarenu.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -118,169 +127,191 @@
   </div>
 </nav>
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          Sandarenu&#39;s Blog
-        </h1>
-        
-      </div>
     </div>
   </header>
 
 
+
     <main class="pb7" role="main">
       
- <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    
-  </article>
   
-  
-  
-  
-  
-  
-  
-    
-    
-
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
-      
-       
-          <h1 class="flex-none">
-            Recent Posts
-          </h1>
-        
-
-      
-
-      <section class="w-100 mw8">
-        
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://sandarenu.github.io/posts/jenkins-role-based-access/" class="color-inherit dim link">
-            Jenkins Role Based Access
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Jenkins out of the box do not have Role based access support. But when using Jenkins in an organization we need to separate the access to different jenkins pipelines based on the user groups. For example developers should not have the access to production related pipelines.
-Fortunately there is a Jenkins plugin called &ldquo;Role-based Authorization Strategy&rdquo; to facilitate exactly this. It has bit of a complex workflow, but it provides the feature we need :).
-        </div>
-          <a href="https://sandarenu.github.io/posts/jenkins-role-based-access/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
           
-        
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="https://sandarenu.github.io/posts/getting-started-with-react-native/" class="db grow">
-            <img src="https://sandarenu.github.io/images/reactive-nativingitup.png.800x600_q96.png" class="img" alt="image from Getting Started with React Native">
-          </a>
-        </div>
+        POSTS
+      </aside>
       
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://sandarenu.github.io/posts/getting-started-with-react-native/" class="color-inherit dim link">
-            Getting Started with React Native
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          React Native is a framework that allows us to create Native Android and iOS applications using JavaScripts by Facebook. It is a extention of React JavaScript framework available for Web application development. With React-Native we can create native android or iOS applications without knowing much about native application development. It opens up the native application development to web developers who knows JavaScript and CSS.
-Main advantage of React-Native becomes very clear when we won&rsquo;t to develop an application which requires a normal Web interface and native Android and iOS applications.
-        </div>
-          <a href="https://sandarenu.github.io/posts/getting-started-with-react-native/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/share?url=https://sandarenu.github.io/posts/jenkins-role-based-access/&amp;text=Jenkins%20Role%20Based%20Access" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
         
-      </div>
-    </div>
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://sandarenu.github.io/posts/jenkins-role-based-access/&amp;title=Jenkins%20Role%20Based%20Access" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
   </div>
-</article>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+
+      <h1 class="f1 athelas mt3 mb1">Jenkins Role Based Access</h1>
       
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://sandarenu.github.io/posts/understanding-guava-lists-transform/" class="color-inherit dim link">
-            Understanding Guava Lists.transform()
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Guava is a wonderful library by Google. Before Java 8 Guava was one of the best ways to use functional programming in Java.
-I&rsquo;ve being using Guava in one of my projects and came accross an strance issue reasontly. I had a list of items and I wanted to convert them to different object and filter some of those items.
-After filtering I was changing some values in the list items.
-        </div>
-          <a href="https://sandarenu.github.io/posts/understanding-guava-lists-transform/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-      </section>
-
+      <p class="tracked">
+          By <strong>
+          
+              Chathurika Sandarenu
+          
+          </strong>
+      </p>
       
-      <section class="w-100">
-        <h1 class="f3">More</h1>
-        
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://sandarenu.github.io/posts/super_charge_your_shell_will_zsh/" class="link black dim">
-              Super Charge Your Shell with ZSH
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://sandarenu.github.io/posts/easy_way_to_mock_rest_services/" class="link black dim">
-              Easy way to Mock REST services
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://sandarenu.github.io/posts/caution_with_java_autoboxing/" class="link black dim">
-              Caution with Java Autoboxing
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://sandarenu.github.io/posts/welcome2newblog/" class="link black dim">
-              Welcome to my new Blog
-            </a>
-          </h2>
-        
-
-        
-        
-          <a href="https://sandarenu.github.io/posts/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Posts</a>
-        
-        </section>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-03-19T16:09:40+05:30">March 19, 2022</time>
       
 
-      </div>
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Jenkins out of the box do not have <em>Role based access support</em>. But when using Jenkins in an organization we need to separate the access to different jenkins pipelines based on the user groups. For example developers should not have the access to production related pipelines.</p>
+<p>Fortunately there is a Jenkins plugin called <a href="https://plugins.jenkins.io/role-strategy/">&ldquo;Role-based Authorization Strategy&rdquo;</a> to facilitate exactly this.
+It has bit of a complex workflow, but it provides the feature we need :).</p>
+<h2 id="1-install-and-configure-role-base-access-plugin">1. Install and Configure Role Base Access Plugin</h2>
+<figure>
+    <img src="https://sandarenu.github.io/images/jenkins/enable_role_base_access.png"/> <figcaption>
+            <h4>Figure 1 - Enable Role Base Access Strategy</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Select the &ldquo;Manage Jenkins&rdquo; -&gt; &ldquo;Plugin Manager&rdquo;</li>
+<li>Go to &ldquo;Available&rdquo; tab and search for &ldquo;Role-based Authorization Strategy&rdquo; and install it and restart jenkins.</li>
+<li>After restart select &ldquo;Manage Jenkins&rdquo; -&gt; &ldquo;Configure Global Security&rdquo;</li>
+<li>Tick the option &ldquo;Role-Based Strategy&rdquo; under &ldquo;Authorization&rdquo; section and then press &ldquo;Save&rdquo;.</li>
+</ul>
+<h2 id="2-create-roles">2. Create Roles</h2>
+<figure>
+    <img src="https://sandarenu.github.io/images/jenkins/create_roles.png"/> <figcaption>
+            <h4>Figure 2 - Create Roles</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Go to &ldquo;Manage Jenkins&rdquo; and select &ldquo;Manage and Assign Roles&rdquo; option.</li>
+<li>Select &ldquo;Manage Roles&rdquo;</li>
+<li>Create the role you want to add under &ldquo;Roles to add&rdquo; and then press &ldquo;Add&rdquo; button.</li>
+<li>From &ldquo;Global roles&rdquo; premissions matrix give read access under &ldquo;Overall&rdquo; column.</li>
+<li>Scroll down to the bottom and click &ldquo;Save&rdquo; to save the changes.</li>
+</ul>
+<h2 id="3-create-user">3. Create User</h2>
+<ul>
+<li>Go to &ldquo;Manage Jenkins&rdquo; and select &ldquo;Manage Users&rdquo; option and select &ldquo;Create User&rdquo; option from the sidebar.</li>
+<li>Enter the details as required and create the new user.</li>
+<li>Try login with this new user. You would get &ldquo;Access Denied&rdquo; page.</li>
+</ul>
+<h2 id="4-assign-user-to-a-role">4. Assign User to a Role</h2>
+<figure>
+    <img src="https://sandarenu.github.io/images/jenkins/add_user_to_role.png"/> <figcaption>
+            <h4>Figure 3 - Add User to a Role</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Go to &ldquo;Manage Jenkins&rdquo; and select &ldquo;Manage and Assign Roles&rdquo; option again and then go to &ldquo;Assign Roles&rdquo; option.</li>
+<li>Enter the username of the user you want to add to the Global Roles in text box &ldquo;User/Group to add&rdquo; and press &ldquo;Add&rdquo;.</li>
+<li>From the &ldquo;Global roles&rdquo; matrix tick on the user group where this user need to be added.</li>
+<li>Once that the ticked click &ldquo;Save&rdquo; button at the bottom.</li>
+</ul>
+<h2 id="5-create-folders">5. Create Folders</h2>
+<p>Now we have to create separate folders to keep jenkins projects for each of these user groups. For that we can use jenkins folders. To create new folder;</p>
+<ul>
+<li>Select &ldquo;New Item&rdquo; -&gt; &ldquo;Folder&rdquo;</li>
+</ul>
+<p>All the projects accible to specific user group will be created under these folders.</p>
+<h1 id="6-assign-folder-to-user-group">6. Assign Folder to User Group</h1>
+<figure>
+    <img src="https://sandarenu.github.io/images/jenkins/assign_folder_permission.png"/> <figcaption>
+            <h4>Figure 4 - Assign Folder to User Role</h4>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Go to &ldquo;Manage Jenkins&rdquo; -&gt; &ldquo;Manage and Assign Roles&rdquo; -&gt; &ldquo;Manage Roles&rdquo; option again and then go to &ldquo;Item roles&rdquo; option.</li>
+<li>Enter the role name as &ldquo;Role to add&rdquo; and the name of the folder we created above as &ldquo;Pattern&rdquo;. Here you have to give in <code>&lt;Folder Name&gt;.*</code> format.</li>
+<li>Then give the &ldquo;Job&rdquo; and &ldquo;Run&rdquo; permission to this folder pattern from the &ldquo;Item Roles&rdquo; matrix.</li>
+<li>Then click &ldquo;Add&rdquo; and final click &ldquo;Save&rdquo; at the bottom.</li>
+</ul>
+<p>Now when you login with the specific user, you will only be able see the pipelines inside your designated folder.</p>
+<ul class="pa0">
   
+   <li class="list di">
+     <a href="https://sandarenu.github.io/tags/ci/cd" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">CI/CD</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://sandarenu.github.io/tags/jenkins" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Jenkins</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://sandarenu.github.io/tags/authorization" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Authorization</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "Sandarenu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
