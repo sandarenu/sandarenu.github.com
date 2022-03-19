@@ -1,209 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Sandarenu&#39;s Blog</title>
-    <link>http://sandarenu.github.io/tags/java/</link>
+    <link>http://example.org/tags/java/</link>
     <description>Recent content in Java on Sandarenu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
     <lastBuildDate>Fri, 22 Jan 2016 16:11:49 +0530</lastBuildDate>
-    <atom:link href="http://sandarenu.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://example.org/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Understanding Guava Lists.transform()</title>
-      <link>http://sandarenu.github.io/post/understanding-guava-lists-transform/</link>
+      <link>http://example.org/posts/understanding-guava-lists-transform/</link>
       <pubDate>Fri, 22 Jan 2016 16:11:49 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/post/understanding-guava-lists-transform/</guid>
-      <description>&lt;p&gt;Guava is a wonderful library by Google. Before Java 8 Guava was one of the best ways to use functional programming in Java.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve being using Guava in one of my projects and came accross an strance issue reasontly. I had a list of items and I wanted to convert them to different object and filter some of those items.&lt;/p&gt;
-
-&lt;p&gt;After filtering I was changing some values in the list items. But what was strange was thay when I printed the list back it was not showing the changed value. It was still showing the original value. Code would look something similar to below.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import com.google.common.base.Function;
-import com.google.common.collect.Lists;
-
-import java.util.List;
-
-public class LineItemHolderGuava {
-    private List&amp;lt;ProcessedItem&amp;gt; mainItems;
-    private List&amp;lt;ProcessedItem&amp;gt; optionalItems;
-
-    public LineItemHolderGuava(List&amp;lt;LineItem&amp;gt; main, List&amp;lt;LineItem&amp;gt; optional){
-        Function&amp;lt;LineItem, ProcessedItem&amp;gt; toSummaryItem = new Function&amp;lt;LineItem, ProcessedItem&amp;gt;() {
-            @Override
-            public ProcessedItem apply(LineItem lineItem) {
-                System.out.println(&amp;quot;Function called with : &amp;quot; + lineItem);
-                return new ProcessedItem(lineItem);
-            }
-        };
-
-        this.optionalItems = Lists.transform(optional, toSummaryItem);
-        this.mainItems = Lists.transform(main, toSummaryItem);
-    }
-
-    public List&amp;lt;ProcessedItem&amp;gt; getMainItems() {
-        return mainItems;
-    }
-
-    public List&amp;lt;ProcessedItem&amp;gt; getOptionalItems() {
-        return optionalItems;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder(&amp;quot;LineItemHolder{&amp;quot;);
-        sb.append(&amp;quot;mainItems=&amp;quot;).append(mainItems);
-        sb.append(&amp;quot;, optionalItems=&amp;quot;).append(optionalItems);
-        sb.append(&#39;}&#39;);
-        return sb.toString();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I have created a simple main method to test this.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public static void main(String [] args){
-        Money m1 = new Money(&amp;quot;LKR&amp;quot;, &amp;quot;10&amp;quot;);
-        Money m2 = new Money(&amp;quot;LKR&amp;quot;, &amp;quot;20&amp;quot;);
-        Money m3 = new Money(&amp;quot;LKR&amp;quot;, &amp;quot;30&amp;quot;);
-        Money m4 = new Money(&amp;quot;LKR&amp;quot;, &amp;quot;40&amp;quot;);
-
-        LineItem l1 = new LineItem(m1, LineItem.OperationType.CREDIT, &amp;quot;L1&amp;quot;);
-        LineItem l2 = new LineItem(m2, LineItem.OperationType.DEBIT, &amp;quot;L2&amp;quot;);
-        LineItem l3 = new LineItem(m2, LineItem.OperationType.CREDIT, &amp;quot;L3&amp;quot;);
-        LineItem l4 = new LineItem(m2, LineItem.OperationType.DEBIT, &amp;quot;L5&amp;quot;);
-
-        List&amp;lt;LineItem&amp;gt; list1 = new ArrayList&amp;lt;LineItem&amp;gt;();
-        list1.add(l1);
-        list1.add(l2);
-
-        List&amp;lt;LineItem&amp;gt; list2 = new ArrayList&amp;lt;LineItem&amp;gt;();
-        list2.add(l3);
-        list2.add(l4);
-
-        LineItemHolderGuava guavaHolder = new LineItemHolderGuava(list1, list2);
-        System.out.println(&amp;quot;G 1: &amp;quot; + guavaHolder);
-
-        guavaHolder.getMainItems().get(0).setAmount(new Money(&amp;quot;USD&amp;quot;, &amp;quot;50&amp;quot;));
-        System.out.println(&amp;quot;G 2: &amp;quot; + guavaHolder);
-
-        guavaHolder.getMainItems().get(0).getAmount().setCurrencyCode(&amp;quot;KES&amp;quot;);
-        System.out.println(&amp;quot;G 3: &amp;quot; + guavaHolder);
-    }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;What do you expect as the output?. I expected to see the second log printed with &lt;code&gt;USD&lt;/code&gt;and third log printed with &lt;code&gt;KES&lt;/code&gt;, but I was wrong. I got following output.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;G 1: LineItemHolder{mainItems=[ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=10}, description=&#39;L1&#39;}, ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L2&#39;}], optionalItems=[ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L3&#39;}, ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L5&#39;}]}
-
-G 2: LineItemHolder{mainItems=[ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=10}, description=&#39;L1&#39;}, ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L2&#39;}], optionalItems=[ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L3&#39;}, ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L5&#39;}]}
-
-G 3: LineItemHolder{mainItems=[ProcessedItem{amount=Money{currencyCode=&#39;KES&#39;, amount=10}, description=&#39;L1&#39;}, ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L2&#39;}], optionalItems=[ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L3&#39;}, ProcessedItem{amount=Money{currencyCode=&#39;LKR&#39;, amount=20}, description=&#39;L5&#39;}]}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Strangly second log got printed with &lt;code&gt;LKR&lt;/code&gt; and third log got printed with &lt;code&gt;KES&lt;/code&gt;. This was driving me nuts. I put logs everywere, and debugged the code and I couldn&amp;rsquo;t find any reason for this. Setter was called properly and I was unable to find a proper reason for this. I ended up rewriting this using Java8 stream API finally.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.List;
-import java.util.stream.Collectors;
-
-public class LineItemHolderJ8 {
-    private List&amp;lt;ProcessedItem&amp;gt; mainItems;
-    private List&amp;lt;ProcessedItem&amp;gt; optionalItems;
-
-    public LineItemHolderJ8(List&amp;lt;LineItem&amp;gt; main, List&amp;lt;LineItem&amp;gt; optional) {
-        this.optionalItems = main.stream().map(l -&amp;gt; new ProcessedItem(l)).collect(Collectors.toList());
-        this.mainItems = main.stream().map(l -&amp;gt; new ProcessedItem(l)).collect(Collectors.toList());
-    }
-
-    public List&amp;lt;ProcessedItem&amp;gt; getMainItems() {
-        return mainItems;
-    }
-
-    public List&amp;lt;ProcessedItem&amp;gt; getOptionalItems() {
-        return optionalItems;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder(&amp;quot;LineItemHolder{&amp;quot;);
-        sb.append(&amp;quot;mainItems=&amp;quot;).append(mainItems);
-        sb.append(&amp;quot;, optionalItems=&amp;quot;).append(optionalItems);
-        sb.append(&#39;}&#39;);
-        return sb.toString();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;During the day I was thinking about this and suddenly I got a feeling that this might be some special thing related to Guava. To my surprise it turn out to be how Guava &lt;code&gt;Lists.transform&lt;/code&gt; works. When I called &lt;code&gt;this.mainItems = Lists.transform(main, toSummaryItem);&lt;/code&gt;, I expected that it will transform the list in to new types and store the converted list in &lt;code&gt;this.mainItems&lt;/code&gt;. But I was wrong. Guava &lt;code&gt;Lists.transform&lt;/code&gt; do not transform the object completely at the first time. What is does is when someone access the list, on the fly it transforms and return the objects.
-So each time I call &lt;code&gt;toString&lt;/code&gt; on the list, Guava will be taking the original list and convert them to the new object types using the function I&amp;rsquo;ve given and return that to me. That why setting &lt;code&gt;guavaHolder.getMainItems().get(0).setAmount(new Money(&amp;quot;USD&amp;quot;, &amp;quot;50&amp;quot;));&lt;/code&gt; didnt work. Even though we set new &lt;code&gt;Money&lt;/code&gt; object, when we call the &lt;code&gt;toString&lt;/code&gt; method to print the list, guava will be creating a completely new list using the original list.
-In the second time we directly changed the currency code &lt;code&gt;guavaHolder.getMainItems().get(0).getAmount().setCurrencyCode(&amp;quot;KES&amp;quot;);&lt;/code&gt;. Here we are actually changing the Money object refered by both the original list and converted list.
-This functionaly was explained properly in the &lt;a href=&#34;http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/collect/Lists.html#transform%28java.util.List,%20com.google.common.base.Function%29&#34;&gt;Guava docs&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Returns a list that applies function to each element of fromList. The returned list is a transformed view of fromList; changes to fromList will be reflected in the returned list and vice versa.&lt;/p&gt;
-
-&lt;p&gt;Since functions are not reversible, the transform is one-way and new items cannot be stored in the returned list. The add, addAll and set methods are unsupported in the returned list.&lt;/p&gt;
-
-&lt;p&gt;The function is applied lazily, invoked when needed. This is necessary for the returned list to be a view, but it means that the function will be applied many times for bulk operations like List.contains(java.lang.Object) and List.hashCode(). For this to perform well, function should be fast. To avoid lazy evaluation when the returned list doesn&amp;rsquo;t need to be a view, copy the returned list into a new list of your choosing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It was my fault that I didn&amp;rsquo;t read the docs properly. I ended up wasting around half a day to fixing a strange bug in one of my code due to this. So next time when you use &lt;code&gt;Lists.tranform&lt;/code&gt; better remember this.&lt;/p&gt;
-</description>
+      <guid>http://example.org/posts/understanding-guava-lists-transform/</guid>
+      <description>Guava is a wonderful library by Google. Before Java 8 Guava was one of the best ways to use functional programming in Java.
+I&amp;rsquo;ve being using Guava in one of my projects and came accross an strance issue reasontly. I had a list of items and I wanted to convert them to different object and filter some of those items.
+After filtering I was changing some values in the list items.</description>
     </item>
     
     <item>
       <title>Easy way to Mock REST services</title>
-      <link>http://sandarenu.github.io/post/easy_way_to_mock_rest_services/</link>
+      <link>http://example.org/posts/easy_way_to_mock_rest_services/</link>
       <pubDate>Sat, 02 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/post/easy_way_to_mock_rest_services/</guid>
-      <description>&lt;p&gt;These days we are working more and more with REST web services. Most of the times we are writing clients to access 3rd party sevices hosted in a remote server or even local services. Sometimes in large teams one group is developing the server and other group is writing the clients to use them. In such situations client team might need to test their clients without the availablity of the real service. They only have the API definition.&lt;/p&gt;
-
-&lt;p&gt;In last few months I came accross such situations multiple times. So I wanted to find out a fast and easy way to simulate(mock) a REST service. That is when I found out about the &lt;a href=&#34;http://wiremock.org/&#34;&gt;WireMocks&lt;/a&gt; capability to create simple REST simulators very easily. I &lt;a href=&#34;http://sandarenu.blogspot.com/2012/12/stubbing-asynchronous-http-services.html&#34;&gt;knew about WireMock before&lt;/a&gt; and had used it in intergration testing. But on those times I had used them with JUnit.&lt;/p&gt;
-
-&lt;p&gt;Same Wiremock can be used to create simulators very easily. We can define request/response formats in a JSON file and use Wiremock to serve them. I have created a sample simulator  in &lt;a href=&#34;https://github.com/sandarenu/rest-sim&#34;&gt;Github&lt;/a&gt;. Have a look and see how easy it is to create a simulator&amp;hellip;&lt;/p&gt;
-</description>
+      <guid>http://example.org/posts/easy_way_to_mock_rest_services/</guid>
+      <description>These days we are working more and more with REST web services. Most of the times we are writing clients to access 3rd party sevices hosted in a remote server or even local services. Sometimes in large teams one group is developing the server and other group is writing the clients to use them. In such situations client team might need to test their clients without the availablity of the real service.</description>
     </item>
     
     <item>
       <title>Caution with Java Autoboxing</title>
-      <link>http://sandarenu.github.io/post/caution_with_java_autoboxing/</link>
+      <link>http://example.org/posts/caution_with_java_autoboxing/</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/post/caution_with_java_autoboxing/</guid>
-      <description>&lt;p&gt;In Java &lt;strong&gt;Boxing&lt;/strong&gt; means when you convert a primitive type to a reference type. So when you have some thing like&lt;/p&gt;
-
-&lt;pre&gt;
-boolean myBool = new Boolean(&#34;true&#34;);
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;Boolean&lt;/code&gt; object is converted to primitive type &lt;code&gt;boolean&lt;/code&gt;. So how this happens under the hood? Java compiler uses the
-method &lt;code&gt;booleanValue()&lt;/code&gt; in &lt;code&gt;Boolean&lt;/code&gt; class to get the primitive value. This is where you have to be careful; there is a possibility
-of NPE when the &lt;code&gt;Boolean&lt;/code&gt; object is null.&lt;/p&gt;
-
-&lt;p&gt;Recently I had a NPE due to this. I was creating a POJO from mongo &lt;code&gt;DBObject&lt;/code&gt;. POJO had a boolean value and I was setting
-its value using a setter.&lt;/p&gt;
-
-&lt;pre&gt;
-public void setExpirableApp(boolean expirableApp) {
-        this.expirableApp = expirableApp;
-}
-&lt;/pre&gt;
-
-&lt;p&gt;I was calling the setter as follows.&lt;/p&gt;
-
-&lt;pre&gt;
-app.setExpirableApp((Boolean) dbObject.get(&#34;expirable-app&#34;))
-&lt;/pre&gt;
-
-&lt;p&gt;This is where I encounter NPE. At first glance everything looked fine. Problem happened when there is no field for &lt;code&gt;&amp;quot;expirable-app&amp;quot;&lt;/code&gt;
-in the DB. In that case &lt;code&gt;(Boolean) dbObject.get(&amp;quot;expirable-app&amp;quot;)&lt;/code&gt; would return &lt;code&gt;null&lt;/code&gt;. In the setter this is tried to convert to
-&lt;code&gt;boolean&lt;/code&gt; which throws NPE due to above explained auto-boxing. So need to be careful when handling scenarios like this.&lt;/p&gt;
-</description>
+      <guid>http://example.org/posts/caution_with_java_autoboxing/</guid>
+      <description>In Java Boxing means when you convert a primitive type to a reference type. So when you have some thing like
+Boolean object is converted to primitive type boolean. So how this happens under the hood? Java compiler uses the method booleanValue() in Boolean class to get the primitive value. This is where you have to be careful; there is a possibility of NPE when the Boolean object is null.</description>
     </item>
     
   </channel>
