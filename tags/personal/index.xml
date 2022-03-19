@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on Sandarenu&#39;s Blog</title>
-    <link>http://sandarenu.github.io/tags/personal/</link>
+    <link>https://sandarenu.github.io/tags/personal/</link>
     <description>Recent content in Personal on Sandarenu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
     <lastBuildDate>Thu, 05 Jun 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sandarenu.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sandarenu.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Welcome to my new Blog</title>
-      <link>http://sandarenu.github.io/posts/welcome2newblog/</link>
+      <link>https://sandarenu.github.io/posts/welcome2newblog/</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/posts/welcome2newblog/</guid>
+      <guid>https://sandarenu.github.io/posts/welcome2newblog/</guid>
       <description>Welcome &amp;hellip; I&amp;rsquo;m testing my new blog powered by hugo and github pages. I&amp;rsquo;ve bein using blogger for sometime. Blogger is really nice platform, but sometimes formatting a post takes lot of effort. Especially when I need to add some code samples it is not that easy.
 I love markdown, and I use it all the time in my day-today work. So wanted to try out static site generation using markdown.</description>
     </item>

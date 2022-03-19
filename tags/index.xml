@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sandarenu&#39;s Blog</title>
-    <link>http://sandarenu.github.io/tags/</link>
+    <link>https://sandarenu.github.io/tags/</link>
     <description>Recent content in Tags on Sandarenu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
     <lastBuildDate>Tue, 22 Mar 2016 21:53:17 +0530</lastBuildDate>
     
-	<atom:link href="http://sandarenu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sandarenu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Programming</title>
-      <link>http://sandarenu.github.io/tags/programming/</link>
+      <link>https://sandarenu.github.io/tags/programming/</link>
       <pubDate>Tue, 22 Mar 2016 21:53:17 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/programming/</guid>
+      <guid>https://sandarenu.github.io/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>React</title>
-      <link>http://sandarenu.github.io/tags/react/</link>
+      <link>https://sandarenu.github.io/tags/react/</link>
       <pubDate>Tue, 22 Mar 2016 21:53:17 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/react/</guid>
+      <guid>https://sandarenu.github.io/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
       <title>React-Native</title>
-      <link>http://sandarenu.github.io/tags/react-native/</link>
+      <link>https://sandarenu.github.io/tags/react-native/</link>
       <pubDate>Tue, 22 Mar 2016 21:53:17 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/react-native/</guid>
+      <guid>https://sandarenu.github.io/tags/react-native/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Guava</title>
-      <link>http://sandarenu.github.io/tags/guava/</link>
+      <link>https://sandarenu.github.io/tags/guava/</link>
       <pubDate>Fri, 22 Jan 2016 16:11:49 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/guava/</guid>
+      <guid>https://sandarenu.github.io/tags/guava/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>http://sandarenu.github.io/tags/java/</link>
+      <link>https://sandarenu.github.io/tags/java/</link>
       <pubDate>Fri, 22 Jan 2016 16:11:49 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/java/</guid>
+      <guid>https://sandarenu.github.io/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://sandarenu.github.io/tags/linux/</link>
+      <link>https://sandarenu.github.io/tags/linux/</link>
       <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/linux/</guid>
+      <guid>https://sandarenu.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zsh</title>
-      <link>http://sandarenu.github.io/tags/zsh/</link>
+      <link>https://sandarenu.github.io/tags/zsh/</link>
       <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/zsh/</guid>
+      <guid>https://sandarenu.github.io/tags/zsh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://sandarenu.github.io/tags/hugo/</link>
+      <link>https://sandarenu.github.io/tags/hugo/</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/hugo/</guid>
+      <guid>https://sandarenu.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Personal</title>
-      <link>http://sandarenu.github.io/tags/personal/</link>
+      <link>https://sandarenu.github.io/tags/personal/</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sandarenu.github.io/tags/personal/</guid>
+      <guid>https://sandarenu.github.io/tags/personal/</guid>
       <description></description>
     </item>
     

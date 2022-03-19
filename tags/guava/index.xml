@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guava on Sandarenu&#39;s Blog</title>
-    <link>http://sandarenu.github.io/tags/guava/</link>
+    <link>https://sandarenu.github.io/tags/guava/</link>
     <description>Recent content in Guava on Sandarenu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
     <lastBuildDate>Fri, 22 Jan 2016 16:11:49 +0530</lastBuildDate>
     
-	<atom:link href="http://sandarenu.github.io/tags/guava/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sandarenu.github.io/tags/guava/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Understanding Guava Lists.transform()</title>
-      <link>http://sandarenu.github.io/posts/understanding-guava-lists-transform/</link>
+      <link>https://sandarenu.github.io/posts/understanding-guava-lists-transform/</link>
       <pubDate>Fri, 22 Jan 2016 16:11:49 +0530</pubDate>
       
-      <guid>http://sandarenu.github.io/posts/understanding-guava-lists-transform/</guid>
+      <guid>https://sandarenu.github.io/posts/understanding-guava-lists-transform/</guid>
       <description>Guava is a wonderful library by Google. Before Java 8 Guava was one of the best ways to use functional programming in Java.
 I&amp;rsquo;ve being using Guava in one of my projects and came accross an strance issue reasontly. I had a list of items and I wanted to convert them to different object and filter some of those items.
 After filtering I was changing some values in the list items.</description>
