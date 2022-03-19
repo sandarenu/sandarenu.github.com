@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>React-Native on Sandarenu&#39;s Blog</title>
-    <link>http://example.org/tags/react-native/</link>
+    <link>http://sandarenu.github.io/tags/react-native/</link>
     <description>Recent content in React-Native on Sandarenu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
     <lastBuildDate>Tue, 22 Mar 2016 21:53:17 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sandarenu.github.io/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Started with React Native</title>
-      <link>http://example.org/posts/getting-started-with-react-native/</link>
+      <link>http://sandarenu.github.io/posts/getting-started-with-react-native/</link>
       <pubDate>Tue, 22 Mar 2016 21:53:17 +0530</pubDate>
       
-      <guid>http://example.org/posts/getting-started-with-react-native/</guid>
+      <guid>http://sandarenu.github.io/posts/getting-started-with-react-native/</guid>
       <description>React Native is a framework that allows us to create Native Android and iOS applications using JavaScripts by Facebook. It is a extention of React JavaScript framework available for Web application development. With React-Native we can create native android or iOS applications without knowing much about native application development. It opens up the native application development to web developers who knows JavaScript and CSS.
 Main advantage of React-Native becomes very clear when we won&amp;rsquo;t to develop an application which requires a normal Web interface and native Android and iOS applications.</description>
     </item>

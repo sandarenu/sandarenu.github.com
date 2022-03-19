@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sandarenu&#39;s Blog</title>
-    <link>http://example.org/posts/</link>
+    <link>http://sandarenu.github.io/posts/</link>
     <description>Recent content in Posts on Sandarenu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2016</copyright>
     <lastBuildDate>Tue, 22 Mar 2016 21:53:17 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sandarenu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Started with React Native</title>
-      <link>http://example.org/posts/getting-started-with-react-native/</link>
+      <link>http://sandarenu.github.io/posts/getting-started-with-react-native/</link>
       <pubDate>Tue, 22 Mar 2016 21:53:17 +0530</pubDate>
       
-      <guid>http://example.org/posts/getting-started-with-react-native/</guid>
+      <guid>http://sandarenu.github.io/posts/getting-started-with-react-native/</guid>
       <description>React Native is a framework that allows us to create Native Android and iOS applications using JavaScripts by Facebook. It is a extention of React JavaScript framework available for Web application development. With React-Native we can create native android or iOS applications without knowing much about native application development. It opens up the native application development to web developers who knows JavaScript and CSS.
 Main advantage of React-Native becomes very clear when we won&amp;rsquo;t to develop an application which requires a normal Web interface and native Android and iOS applications.</description>
     </item>
     
     <item>
       <title>Understanding Guava Lists.transform()</title>
-      <link>http://example.org/posts/understanding-guava-lists-transform/</link>
+      <link>http://sandarenu.github.io/posts/understanding-guava-lists-transform/</link>
       <pubDate>Fri, 22 Jan 2016 16:11:49 +0530</pubDate>
       
-      <guid>http://example.org/posts/understanding-guava-lists-transform/</guid>
+      <guid>http://sandarenu.github.io/posts/understanding-guava-lists-transform/</guid>
       <description>Guava is a wonderful library by Google. Before Java 8 Guava was one of the best ways to use functional programming in Java.
 I&amp;rsquo;ve being using Guava in one of my projects and came accross an strance issue reasontly. I had a list of items and I wanted to convert them to different object and filter some of those items.
 After filtering I was changing some values in the list items.</description>
@@ -35,38 +35,38 @@ After filtering I was changing some values in the list items.</description>
     
     <item>
       <title>Super Charge Your Shell with ZSH</title>
-      <link>http://example.org/posts/super_charge_your_shell_will_zsh/</link>
+      <link>http://sandarenu.github.io/posts/super_charge_your_shell_will_zsh/</link>
       <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/super_charge_your_shell_will_zsh/</guid>
+      <guid>http://sandarenu.github.io/posts/super_charge_your_shell_will_zsh/</guid>
       <description>I&amp;rsquo;ve being using Linux as my primary OS for about 6 years. Since I&amp;rsquo;m doing programming all the time, I use shell all the time to perform various task from compiling to commiting code. First I used the normal Terminal comes with Ubuntu and then for about three years I&amp;rsquo;ve being using Terminator. Terminator is better than normal terminal since it has split screen feature. But no matter what the frontend, underneath It is still the BASH.</description>
     </item>
     
     <item>
       <title>Easy way to Mock REST services</title>
-      <link>http://example.org/posts/easy_way_to_mock_rest_services/</link>
+      <link>http://sandarenu.github.io/posts/easy_way_to_mock_rest_services/</link>
       <pubDate>Sat, 02 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/easy_way_to_mock_rest_services/</guid>
+      <guid>http://sandarenu.github.io/posts/easy_way_to_mock_rest_services/</guid>
       <description>These days we are working more and more with REST web services. Most of the times we are writing clients to access 3rd party sevices hosted in a remote server or even local services. Sometimes in large teams one group is developing the server and other group is writing the clients to use them. In such situations client team might need to test their clients without the availablity of the real service.</description>
     </item>
     
     <item>
       <title>Caution with Java Autoboxing</title>
-      <link>http://example.org/posts/caution_with_java_autoboxing/</link>
+      <link>http://sandarenu.github.io/posts/caution_with_java_autoboxing/</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/caution_with_java_autoboxing/</guid>
+      <guid>http://sandarenu.github.io/posts/caution_with_java_autoboxing/</guid>
       <description>In Java Boxing means when you convert a primitive type to a reference type. So when you have some thing like
 Boolean object is converted to primitive type boolean. So how this happens under the hood? Java compiler uses the method booleanValue() in Boolean class to get the primitive value. This is where you have to be careful; there is a possibility of NPE when the Boolean object is null.</description>
     </item>
     
     <item>
       <title>Welcome to my new Blog</title>
-      <link>http://example.org/posts/welcome2newblog/</link>
+      <link>http://sandarenu.github.io/posts/welcome2newblog/</link>
       <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/welcome2newblog/</guid>
+      <guid>http://sandarenu.github.io/posts/welcome2newblog/</guid>
       <description>Welcome &amp;hellip; I&amp;rsquo;m testing my new blog powered by hugo and github pages. I&amp;rsquo;ve bein using blogger for sometime. Blogger is really nice platform, but sometimes formatting a post takes lot of effort. Especially when I need to add some code samples it is not that easy.
 I love markdown, and I use it all the time in my day-today work. So wanted to try out static site generation using markdown.</description>
     </item>
