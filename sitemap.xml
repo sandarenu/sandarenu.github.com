@@ -3,43 +3,64 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sandarenu.github.io/tags/authorization/</loc>
-    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <loc>https://sandarenu.github.io/posts/introductons-to-kubernetes-part-1/</loc>
+    <lastmod>2023-01-05T16:04:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://sandarenu.github.io/tags/jenkins/</loc>
-    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <loc>https://sandarenu.github.io/tags/k3s/</loc>
+    <lastmod>2023-01-05T16:04:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://sandarenu.github.io/posts/jenkins-role-based-access/</loc>
-    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <loc>https://sandarenu.github.io/tags/kubernetes/</loc>
+    <lastmod>2023-01-05T16:04:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sandarenu.github.io/posts/</loc>
-    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <lastmod>2023-01-05T16:04:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sandarenu.github.io/</loc>
-    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <lastmod>2023-01-05T16:04:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://sandarenu.github.io/tags/</loc>
-    <lastmod>2022-03-19T16:09:40+05:30</lastmod>
+    <lastmod>2023-01-05T16:04:02+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/tags/authorization/</loc>
+    <lastmod>2022-01-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/tags/jenkins/</loc>
+    <lastmod>2022-01-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://sandarenu.github.io/posts/jenkins-role-based-access/</loc>
+    <lastmod>2022-01-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
